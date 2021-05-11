@@ -8,6 +8,7 @@
 // Primary Colors
 $darkblue: rgb(3, 0, 51);
 $green: rgb(121, 199, 121);
+$lightGray: rgb(233, 233, 233);
 
 // flex the element
 @mixin flex($justifyContent, $alignItems) {
@@ -15,6 +16,21 @@ $green: rgb(121, 199, 121);
 	justify-content: $justifyContent;
 	align-items: $alignItems;
 }
+
+
+// For every title
+.title {
+	font-weight: bold;
+	font-size: 35px;
+	text-align: center;
+}
+
+// When set to active
+.active {
+	background: $green;
+}
+
+
 
 
 @mixin transform($skewY, $translateY) {
@@ -134,8 +150,6 @@ $green: rgb(121, 199, 121);
 
 		// Sign Up for the live Webinar countdawn UI
 		.countdown {
-			$lightGray: rgb(233, 233, 233);
-
 			background: white;
 			color: black;
 			position: relative;
@@ -239,24 +253,61 @@ $green: rgb(121, 199, 121);
 
 .our-mission {
 	width: 700px;
-	margin: 0 auto;
+	margin: 0 auto 30px;
 	padding: 50px 0;
 
 	p {
 		text-align: center;
 	}
 
-	.title {
-		font-weight: bold;
-		font-size: 32px;
-	}
+	// Title here
 
 	.one {
 		margin: 30px 0;
 	}
 }
 
-// When set to active
-.active {
-	background: $green;
+.whats-covered {
+	padding: 50px 0;
+
+	.title {
+		margin-bottom: 30px;
+	}
+
+	.covered-container {
+		@include flex(center, none);
+		flex-wrap: wrap;
+
+		.covered {
+			@include flex(space-between, center);
+			padding: 30px;
+			width: 550px;
+			margin: 10px;
+			border-radius: 20px;
+			box-shadow: 0 15px 15px $lightGray;
+
+			img {
+				width: 35px;
+				height: 35px;
+				align-self: flex-start;
+				margin-right: 30px;
+				border-radius: 50%;
+				box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
+			}
+
+			.detail {
+
+				.to-cover {
+					font-size: 20px;
+					font-weight: bold;
+					margin-bottom: 10px;
+				}
+
+				.description {
+					font-size: 14px;
+				}
+			}
+		}
+	}
 }
+

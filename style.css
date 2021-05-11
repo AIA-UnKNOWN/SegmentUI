@@ -5,6 +5,16 @@
   font-family: Arial;
 }
 
+.title {
+  font-weight: bold;
+  font-size: 35px;
+  text-align: center;
+}
+
+.active {
+  background: #79c779;
+}
+
 .introduction {
   background: #030033;
   color: white;
@@ -192,22 +202,53 @@
 
 .our-mission {
   width: 700px;
-  margin: 0 auto;
+  margin: 0 auto 30px;
   padding: 50px 0;
 }
 .our-mission p {
   text-align: center;
 }
-.our-mission .title {
-  font-weight: bold;
-  font-size: 32px;
-}
 .our-mission .one {
   margin: 30px 0;
 }
 
-.active {
-  background: #79c779;
+.whats-covered {
+  padding: 50px 0;
+}
+.whats-covered .title {
+  margin-bottom: 30px;
+}
+.whats-covered .covered-container {
+  display: flex;
+  justify-content: center;
+  align-items: none;
+  flex-wrap: wrap;
+}
+.whats-covered .covered-container .covered {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  width: 550px;
+  margin: 10px;
+  border-radius: 20px;
+  box-shadow: 0 15px 15px #e9e9e9;
+}
+.whats-covered .covered-container .covered img {
+  width: 35px;
+  height: 35px;
+  align-self: flex-start;
+  margin-right: 30px;
+  border-radius: 50%;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+.whats-covered .covered-container .covered .detail .to-cover {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.whats-covered .covered-container .covered .detail .description {
+  font-size: 14px;
 }
 
 /*# sourceMappingURL=style.css.map */
