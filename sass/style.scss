@@ -1,22 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
-
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	// font-family: 'Ubuntu', sans-serif;
 	font-family: Arial;	
 }
 
+// Primary Colors
 $darkblue: rgb(3, 0, 51);
 $green: rgb(121, 199, 121);
 
-// flex
+// flex the element
 @mixin flex($justifyContent, $alignItems) {
 	display: flex;
 	justify-content: $justifyContent;
 	align-items: $alignItems;
 }
+
 
 @mixin transform($skewY, $translateY) {
 	transform: skewY($skewY) translateY($translateY);
@@ -28,6 +27,7 @@ $green: rgb(121, 199, 121);
 	padding: 80px 40px;
 	@include transform(-10deg, -120px);
 	transform-origin: top left;
+	margin-bottom: -100px;
 
 	header {
 		@include transform(10deg, 170px);
@@ -220,11 +220,14 @@ $green: rgb(121, 199, 121);
 				font-size: 1em;
 				border: none;
 				box-shadow: 0 0 1px black;
+
+				&:focus {
+					outline: none;
+				}
 			}
 
 			input[type='submit'] {
 				box-shadow: none;
-				background: $green;
 				color: white;
 				margin-bottom: 0;
 				margin-top: 45px;
@@ -232,6 +235,25 @@ $green: rgb(121, 199, 121);
 		}
 	}
 
+}
+
+.our-mission {
+	width: 700px;
+	margin: 0 auto;
+	padding: 50px 0;
+
+	p {
+		text-align: center;
+	}
+
+	.title {
+		font-weight: bold;
+		font-size: 32px;
+	}
+
+	.one {
+		margin: 30px 0;
+	}
 }
 
 // When set to active
