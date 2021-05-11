@@ -1,14 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: Arial;	
+	font-family: 'Montserrat', sans-serif;
 }
 
 // Primary Colors
 $darkblue: rgb(3, 0, 51);
 $green: rgb(121, 199, 121);
 $lightGray: rgb(233, 233, 233);
+$violet: rgb(134, 1, 196);
 
 // flex the element
 @mixin flex($justifyContent, $alignItems) {
@@ -194,7 +197,7 @@ $lightGray: rgb(233, 233, 233);
 					@include flex(center, center);
 					font-size: 30px;
 					font-weight: bold;
-					color: rgb(134, 1, 196);
+					color: $violet;
 					position: relative;
 					border-radius: 10px;
 				}
@@ -263,7 +266,7 @@ $lightGray: rgb(233, 233, 233);
 	// Title here
 
 	.one {
-		margin: 30px 0;
+		margin: 40px 0 30px;
 	}
 }
 
@@ -311,3 +314,67 @@ $lightGray: rgb(233, 233, 233);
 	}
 }
 
+.what-participants-say {
+	padding: 50px 0;
+
+	.title {
+		margin-bottom: 40px;
+	}
+
+	.participants {
+		@include flex(space-evenly, center);
+
+		.participant {
+			padding: 30px 30px 40px;
+			width: 500px;
+			border-radius: 20px;
+			box-shadow: 0 20px 20px $lightGray;
+
+			.feedback {
+				margin-bottom: 20px;
+
+				&::before, &::after {
+					content: '"';
+					font-weight: bold;
+					font-size: 18px;
+					margin: 0 4px;
+				}
+			}
+
+			.information {
+				@include flex(flex-start, center);
+
+				.image-container {
+					width: 80px;
+					height: 80px;
+
+					img {
+						height: 100%;
+						width: 100%;
+						object-fit: cover;
+						object-position: center 0;
+						border-radius: 50%;
+					}
+				}
+
+				.info {
+					@include flex(center, flex-start);
+					flex-direction: column;
+					margin-left: 20px;
+
+					.name {
+						color: $violet;
+						font-weight: bold;
+						font-size: 18px;
+						letter-spacing: 1px;
+					}
+
+					.position {
+						margin: 5px 0 3px;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+}
