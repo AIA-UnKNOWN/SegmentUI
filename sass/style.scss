@@ -272,6 +272,7 @@ $violet: rgb(134, 1, 196);
 
 .whats-covered {
 	padding: 50px 0;
+	margin: 0 auto 30px;
 
 	.title {
 		margin-bottom: 30px;
@@ -339,6 +340,11 @@ $violet: rgb(134, 1, 196);
 					font-size: 18px;
 					margin: 0 4px;
 				}
+
+				&::selection {
+					background: $violet;
+					color: white;
+				}
 			}
 
 			.information {
@@ -378,3 +384,90 @@ $violet: rgb(134, 1, 196);
 		}
 	}
 }
+
+.sign-up-for-free {
+	background: $darkblue;
+	color: white;
+	padding: 40px 40px 80px;
+	position: relative;
+	margin-top: 400px;
+
+	&::after {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 300px;
+		background: $darkblue;
+		z-index: -1;
+		position: absolute;
+		top: 0;
+		left: 0;
+		@include transform(-10deg, -120px)
+	}
+
+	.image-container {
+		transform: translateY(-400px);
+		width: 80%;
+		margin: 0 auto;
+		position: relative;
+		margin-bottom: -280px;
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 35px;
+			width: 70%;
+			height: 10px;
+			background: rgba(0, 0, 0, 0.192);
+			border-radius: 50% 50% 50% 50% / 30% 30% 30% 30% ;
+			box-shadow: 0 0 30px black;
+			transform: rotate(5deg);
+			z-index: -1;
+		}
+	}
+
+	.sign-up {
+		@include flex(space-between, center);
+
+		.text {
+			width: 600px;
+
+			.title {
+				margin-bottom: 40px;
+			}
+
+			.description {
+				line-height: 20px;
+				text-align: center;
+			}
+		}
+
+		form {
+			width: 500px;
+
+			#userFullname, #userEmail, input[type='submit'] {
+				display: block;
+				margin: 0 auto 30px;
+				width: 95%;
+				padding: 15px;
+				border-radius: 5px;
+				font-size: 1em;
+				border: none;
+				box-shadow: 0 0 1px black;
+
+				&:focus {
+					outline: none;
+				}
+			}
+
+			input[type='submit'] {
+				box-shadow: none;
+				color: white;
+				margin-bottom: 0;
+				margin-top: 45px;
+			}
+		}
+	}
+}
+

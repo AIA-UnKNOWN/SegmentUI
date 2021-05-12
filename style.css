@@ -215,6 +215,7 @@
 
 .whats-covered {
   padding: 50px 0;
+  margin: 0 auto 30px;
 }
 .whats-covered .title {
   margin-bottom: 30px;
@@ -278,6 +279,10 @@
   font-size: 18px;
   margin: 0 4px;
 }
+.what-participants-say .participants .participant .feedback::selection {
+  background: #8601c4;
+  color: white;
+}
 .what-participants-say .participants .participant .information {
   display: flex;
   justify-content: flex-start;
@@ -310,6 +315,83 @@
 .what-participants-say .participants .participant .information .info .position {
   margin: 5px 0 3px;
   font-size: 14px;
+}
+
+.sign-up-for-free {
+  background: #030033;
+  color: white;
+  padding: 40px 40px 80px;
+  position: relative;
+  margin-top: 400px;
+}
+.sign-up-for-free::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 300px;
+  background: #030033;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: skewY(-10deg) translateY(-120px);
+}
+.sign-up-for-free .image-container {
+  transform: translateY(-400px);
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: -280px;
+}
+.sign-up-for-free .image-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 35px;
+  width: 70%;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.192);
+  border-radius: 50% 50% 50% 50%/30% 30% 30% 30%;
+  box-shadow: 0 0 30px black;
+  transform: rotate(5deg);
+  z-index: -1;
+}
+.sign-up-for-free .sign-up {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sign-up-for-free .sign-up .text {
+  width: 600px;
+}
+.sign-up-for-free .sign-up .text .title {
+  margin-bottom: 40px;
+}
+.sign-up-for-free .sign-up .text .description {
+  line-height: 20px;
+  text-align: center;
+}
+.sign-up-for-free .sign-up form {
+  width: 500px;
+}
+.sign-up-for-free .sign-up form #userFullname, .sign-up-for-free .sign-up form #userEmail, .sign-up-for-free .sign-up form input[type=submit] {
+  display: block;
+  margin: 0 auto 30px;
+  width: 95%;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 1em;
+  border: none;
+  box-shadow: 0 0 1px black;
+}
+.sign-up-for-free .sign-up form #userFullname:focus, .sign-up-for-free .sign-up form #userEmail:focus, .sign-up-for-free .sign-up form input[type=submit]:focus {
+  outline: none;
+}
+.sign-up-for-free .sign-up form input[type=submit] {
+  box-shadow: none;
+  color: white;
+  margin-bottom: 0;
+  margin-top: 45px;
 }
 
 /*# sourceMappingURL=style.css.map */
