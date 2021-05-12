@@ -7,6 +7,11 @@
 	font-family: 'Montserrat', sans-serif;
 }
 
+body {
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
 // Primary Colors
 $darkblue: rgb(3, 0, 51);
 $green: rgb(121, 199, 121);
@@ -31,6 +36,10 @@ $violet: rgb(134, 1, 196);
 // When set to active
 .active {
 	background: $green;
+
+	&:hover {
+		filter: brightness(90%);
+	}
 }
 
 
@@ -69,10 +78,6 @@ $violet: rgb(134, 1, 196);
 					display: block;
 					padding: 12px 20px;
 					border-radius: 5px;
-
-					&:hover {
-						filter: brightness(90%);
-					}
 				}
 			}
 		}

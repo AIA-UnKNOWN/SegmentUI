@@ -6,6 +6,11 @@
   font-family: "Montserrat", sans-serif;
 }
 
+body {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
 .title {
   font-weight: bold;
   font-size: 35px;
@@ -14,6 +19,9 @@
 
 .active {
   background: #79c779;
+}
+.active:hover {
+  filter: brightness(90%);
 }
 
 .introduction {
@@ -44,9 +52,6 @@
   display: block;
   padding: 12px 20px;
   border-radius: 5px;
-}
-.introduction header ul li a:hover {
-  filter: brightness(90%);
 }
 .introduction > .info {
   transform: skewY(10deg) translateY(170px);
