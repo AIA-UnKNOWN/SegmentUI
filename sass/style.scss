@@ -429,6 +429,7 @@ $violet: rgb(134, 1, 196);
 
 	.sign-up {
 		@include flex(space-between, center);
+		margin-bottom: 150px;
 
 		.text {
 			width: 600px;
@@ -471,3 +472,27 @@ $violet: rgb(134, 1, 196);
 	}
 }
 
+footer {
+	background: $darkblue;
+	color: white;
+	@include flex(space-between, center);
+	font-size: 12px;
+	padding: 40px;
+
+	ul {
+		
+		li {
+			display: inline-block;
+			margin-left: 20px;
+
+			a {
+				text-decoration: none;
+				color: white;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
