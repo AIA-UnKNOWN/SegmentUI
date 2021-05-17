@@ -186,9 +186,13 @@ body {
 .introduction > .info .countdown .timer .seconds::after {
   content: "seconds";
 }
-.introduction > .info .countdown #userFullname, .introduction > .info .countdown #userEmail, .introduction > .info .countdown input[type=submit] {
+.introduction > .info .countdown .userFullname, .introduction > .info .countdown .userEmail {
+  margin-bottom: 30px;
+  position: relative;
+}
+.introduction > .info .countdown .userFullname #userFullname, .introduction > .info .countdown .userFullname #userEmail, .introduction > .info .countdown .userEmail #userFullname, .introduction > .info .countdown .userEmail #userEmail {
   display: block;
-  margin: 0 auto 30px;
+  margin: 0 auto;
   width: 95%;
   padding: 15px;
   border-radius: 5px;
@@ -196,14 +200,51 @@ body {
   border: none;
   box-shadow: 0 0 1px black;
 }
-.introduction > .info .countdown #userFullname:focus, .introduction > .info .countdown #userEmail:focus, .introduction > .info .countdown input[type=submit]:focus {
+.introduction > .info .countdown .userFullname #userFullname:focus, .introduction > .info .countdown .userFullname #userEmail:focus, .introduction > .info .countdown .userEmail #userFullname:focus, .introduction > .info .countdown .userEmail #userEmail:focus {
   outline: none;
+}
+.introduction > .info .countdown .userFullname label, .introduction > .info .countdown .userEmail label {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -40px;
+  display: none;
+  width: 95%;
+  z-index: 10;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background: #FFCCCC;
+  color: #cc0000;
+  font-size: 14px;
+}
+.introduction > .info .countdown .userFullname label::after, .introduction > .info .countdown .userEmail label::after {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) rotate(-45deg);
+  top: -4px;
+  content: "";
+  border: 5px solid #FFCCCC;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.introduction > .info .countdown .userFullname .show-error, .introduction > .info .countdown .userEmail .show-error {
+  display: block;
 }
 .introduction > .info .countdown input[type=submit] {
   box-shadow: none;
   color: white;
   margin-bottom: 0;
   margin-top: 45px;
+  display: block;
+  margin: 0 auto 30px;
+  width: 95%;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 1em;
+  border: none;
+}
+.introduction > .info .countdown input[type=submit]:focus {
+  outline: none;
 }
 
 .our-mission {
@@ -380,9 +421,13 @@ body {
 .sign-up-for-free .sign-up form {
   width: 500px;
 }
-.sign-up-for-free .sign-up form #userFullname, .sign-up-for-free .sign-up form #userEmail, .sign-up-for-free .sign-up form input[type=submit] {
+.sign-up-for-free .sign-up form .userFullname, .sign-up-for-free .sign-up form .userEmail {
+  margin-bottom: 30px;
+  position: relative;
+}
+.sign-up-for-free .sign-up form .userFullname #userFullname, .sign-up-for-free .sign-up form .userFullname #userEmail, .sign-up-for-free .sign-up form .userEmail #userFullname, .sign-up-for-free .sign-up form .userEmail #userEmail {
   display: block;
-  margin: 0 auto 30px;
+  margin: 0 auto;
   width: 95%;
   padding: 15px;
   border-radius: 5px;
@@ -390,14 +435,51 @@ body {
   border: none;
   box-shadow: 0 0 1px black;
 }
-.sign-up-for-free .sign-up form #userFullname:focus, .sign-up-for-free .sign-up form #userEmail:focus, .sign-up-for-free .sign-up form input[type=submit]:focus {
+.sign-up-for-free .sign-up form .userFullname #userFullname:focus, .sign-up-for-free .sign-up form .userFullname #userEmail:focus, .sign-up-for-free .sign-up form .userEmail #userFullname:focus, .sign-up-for-free .sign-up form .userEmail #userEmail:focus {
   outline: none;
+}
+.sign-up-for-free .sign-up form .userFullname label, .sign-up-for-free .sign-up form .userEmail label {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -40px;
+  display: none;
+  width: 95%;
+  z-index: 10;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background: #FFCCCC;
+  color: #cc0000;
+  font-size: 14px;
+}
+.sign-up-for-free .sign-up form .userFullname label::after, .sign-up-for-free .sign-up form .userEmail label::after {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) rotate(-45deg);
+  top: -4px;
+  content: "";
+  border: 5px solid #FFCCCC;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.sign-up-for-free .sign-up form .userFullname .show-error, .sign-up-for-free .sign-up form .userEmail .show-error {
+  display: block;
 }
 .sign-up-for-free .sign-up form input[type=submit] {
   box-shadow: none;
   color: white;
   margin-bottom: 0;
   margin-top: 45px;
+  display: block;
+  margin: 0 auto 30px;
+  width: 95%;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 1em;
+  border: none;
+}
+.sign-up-for-free .sign-up form input[type=submit]:focus {
+  outline: none;
 }
 
 footer {

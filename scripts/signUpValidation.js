@@ -8,19 +8,34 @@
 
 	// Validator function
 	function validate(form) {
-		const fullname = form.querySelector('#userFullname').value;
-		const email = form.querySelector('#userEmail').value;
+		const fullname = form.querySelector('#userFullname');
+		const email = form.querySelector('#userEmail');
+		// Error messages
+		const fullnameError = form.querySelector("#userFullname + label");
+		const emailError = form.querySelector("#userEmail + label");
 
 		// Valid Inputs
 		const expectedFullname = /(\w)+/;
-		const expectedEmail = /[a-zA-Z0-9]+(@[a-z]+.[a-z]+)$/; // Valid email address
+		const expectedEmail = /@gmail.com$/; // Valid email address
 
-		if (!expectedFullname.test(fullname) && !expectedEmail.test(email)) {
-			console.log('Please fill with a valid inputs!');
-		} else if (!expectedFullname.test(fullname)) {
-			console.log('Invalid fullname!');
+		if (!expectedFullname.test(fullname.value) && !expectedEmail.test(email.value)) {
+			// If all inputs were invalid
+			fullnameError.className = 'show-error';
+			emailError.className = 'show-error';
+		} else if (!expectedFullname.test(fullname.value)) {
+			// If name is either blank or invalid
+			emailError.classList.remove('show-error');
+			fullnameError.className = 'show-error';
+		} else if (!expectedEmail.test(email.value)) {
+			// If email if either blank or invalid
+			fullnameError.classList.remove('show-error');
+			emailError.className = 'show-error';
 		} else {
-			console.log('Invalid email address!');
+			// If all valid
+			fullnameError.classList.remove('show-error');
+			emailError.classList.remove('show-error');
+			fullname.value = '';
+			email.value = '';
 		}
 
 	}

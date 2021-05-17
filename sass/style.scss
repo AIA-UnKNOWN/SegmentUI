@@ -17,6 +17,8 @@ $darkblue: rgb(3, 0, 51);
 $green: rgb(121, 199, 121);
 $lightGray: rgb(233, 233, 233);
 $violet: rgb(134, 1, 196);
+$errorBackground: #FFCCCC;
+$errorText: #cc0000;
 
 // flex the element
 @mixin flex($justifyContent, $alignItems) {
@@ -233,18 +235,54 @@ $violet: rgb(134, 1, 196);
 				}
 			}
 
-			#userFullname, #userEmail, input[type='submit'] {
-				display: block;
-				margin: 0 auto 30px;
-				width: 95%;
-				padding: 15px;
-				border-radius: 5px;
-				font-size: 1em;
-				border: none;
-				box-shadow: 0 0 1px black;
+			.userFullname, .userEmail {
+				margin-bottom: 30px;
+				position: relative;
 
-				&:focus {
-					outline: none;
+				#userFullname, #userEmail {
+					display: block;
+					margin: 0 auto;
+					width: 95%;
+					padding: 15px;
+					border-radius: 5px;
+					font-size: 1em;
+					border: none;
+					box-shadow: 0 0 1px black;
+	
+					&:focus {
+						outline: none;
+					}
+				}
+
+				label {
+					position: absolute;
+					left: 50%;
+					transform: translateX(-50%);
+					bottom: -40px;
+					display: none;
+					width: 95%;
+					z-index: 10;
+					padding: 5px 10px;
+					border-radius: 10px;
+					background: $errorBackground;
+					color: $errorText;
+					font-size: 14px;
+
+					&::after {
+						position: absolute;
+						left: 50%;
+						transform: translateX(-50%) rotate(-45deg);
+						top: -4px;
+						content: '';
+						border: 5px solid $errorBackground;
+						border-bottom-color: transparent;
+						border-left-color: transparent;
+					}
+				}
+
+				// For showing error messages
+				.show-error {
+					display: block;
 				}
 			}
 
@@ -253,6 +291,17 @@ $violet: rgb(134, 1, 196);
 				color: white;
 				margin-bottom: 0;
 				margin-top: 45px;
+				display: block;
+				margin: 0 auto 30px;
+				width: 95%;
+				padding: 15px;
+				border-radius: 5px;
+				font-size: 1em;
+				border: none;
+
+				&:focus {
+					outline: none;
+				}
 			}
 		}
 	}
@@ -452,18 +501,54 @@ $violet: rgb(134, 1, 196);
 		form {
 			width: 500px;
 
-			#userFullname, #userEmail, input[type='submit'] {
-				display: block;
-				margin: 0 auto 30px;
-				width: 95%;
-				padding: 15px;
-				border-radius: 5px;
-				font-size: 1em;
-				border: none;
-				box-shadow: 0 0 1px black;
+			.userFullname, .userEmail {
+				margin-bottom: 30px;
+				position: relative;
 
-				&:focus {
-					outline: none;
+				#userFullname, #userEmail {
+					display: block;
+					margin: 0 auto;
+					width: 95%;
+					padding: 15px;
+					border-radius: 5px;
+					font-size: 1em;
+					border: none;
+					box-shadow: 0 0 1px black;
+	
+					&:focus {
+						outline: none;
+					}
+				}
+
+				label {
+					position: absolute;
+					left: 50%;
+					transform: translateX(-50%);
+					bottom: -40px;
+					display: none;
+					width: 95%;
+					z-index: 10;
+					padding: 5px 10px;
+					border-radius: 10px;
+					background: $errorBackground;
+					color: $errorText;
+					font-size: 14px;
+
+					&::after {
+						position: absolute;
+						left: 50%;
+						transform: translateX(-50%) rotate(-45deg);
+						top: -4px;
+						content: '';
+						border: 5px solid $errorBackground;
+						border-bottom-color: transparent;
+						border-left-color: transparent;
+					}
+				}
+
+				// For showing error messages
+				.show-error {
+					display: block;
 				}
 			}
 
@@ -472,6 +557,17 @@ $violet: rgb(134, 1, 196);
 				color: white;
 				margin-bottom: 0;
 				margin-top: 45px;
+				display: block;
+				margin: 0 auto 30px;
+				width: 95%;
+				padding: 15px;
+				border-radius: 5px;
+				font-size: 1em;
+				border: none;
+
+				&:focus {
+					outline: none;
+				}
 			}
 		}
 	}
@@ -501,5 +597,4 @@ footer {
 		}
 	}
 }
-
 
