@@ -1,0 +1,126 @@
+@media (max-width: 768px) {
+
+	$lightGray: rgb(233, 233, 233);
+
+	.introduction {
+		padding: 0 5px;
+
+		& > .info {
+			flex-wrap: wrap;
+
+			.entries {
+				margin-bottom: 100px;
+				width: 100%;
+
+				.date, .mission {
+					font-size: 13px;
+				}
+
+				.mission-title {
+					font-size: 40px;
+					text-align: center;
+				}
+
+				.mission {
+					text-align: center;
+					margin-bottom: 80px;
+				}
+
+				.author {
+					flex-wrap: wrap;
+					justify-content: center;
+
+					.image-container {
+						margin-bottom: 20px;
+					}
+
+					.info {
+						align-items: center;
+
+						.position {
+							font-style: normal;
+						}
+
+						img {
+							margin-top: 10px;
+						}
+					}
+				}
+			}
+
+			.countdown {
+				padding: 70px 10px 20px;
+			}
+		}
+	}
+
+	.our-mission {
+		width: 100%;
+		margin: 80px auto 30px;
+		padding: 50px 20px;
+	}
+
+	.what-participants-say {
+		padding: 50px 20px;
+
+		.participants {
+			flex-wrap: wrap;
+
+			.participant {
+				margin-bottom: 30px;
+				box-shadow: 0 5px 20px $lightGray;
+			}
+		}
+	}
+
+	.sign-up-for-free {
+		padding: 150px 10px 50px;
+		margin-top: 300px;
+		
+		.image-container {
+			top: 80px;
+		}
+
+		.sign-up {
+			flex-wrap: wrap;
+			margin-bottom: 30px;
+
+			.text {
+				margin-bottom: 70px;
+			}
+
+			form {
+
+				.userFullname, .userEmail {
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+
+	footer {
+		flex-wrap: wrap;
+		padding: 40px 20px 20px;
+
+		label {
+			width: 100%;
+			text-align: center;
+			margin-bottom: 15px;
+			border-bottom: 1px solid white;
+			padding: 15px;
+		}
+
+		ul {
+			display: block;
+			width: 100%;
+
+			li {
+				margin: 0 auto;
+				display: block;
+				text-align: center;
+				padding: 10px;
+			}
+		}
+	}
+
+}
